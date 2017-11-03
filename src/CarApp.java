@@ -27,35 +27,33 @@ public class CarApp {
 		
 		scnr.nextLine();
 		
-		//System.out.println("You will be entering: " + carCount + " cars.");
-				
+						
 		for (int i = 0; i < carCount; i++) {
 			
-			System.out.println("Enter Car Make: " );
+		    makes = Validator.getString(scnr, "Enter Car Make: ");
 			
-			makes = scnr.nextLine();
-			System.out.println("Enter Car Model: " );
-			model = scnr.nextLine();
 			
-			System.out.println("Enter Car Year: ");
-			year = scnr.nextInt();
-			System.out.println("Enter Car Price: ");
-			price = scnr.nextDouble();
-			scnr.nextLine();
+			// System.out.println("Enter Car Model: " );
+			model = Validator.getString(scnr, "Enter Car Model: ");
+			
+			//System.out.println("Enter Car Year: ");
+			year = Validator.getInt(scnr, "Enter Car Year: ");
+			//System.out.println("Enter Car Price: ");
+			price = Validator.getDouble(scnr, "Enter Car Price: ");
+			//scnr.nextLine();
 			carObj = new Cars(makes, model, year, price);
 			carsList.add(carObj);
 		}
 		
-		System.out.printf("%-20s %-20s %-20s %20s\n",  "Make",  "Model", "Year",  "---", "Price" );
-		
-		System.out.println(carsList);
+		System.out.printf("%-10s %-10s %-10s %-10s %-10s\n", "Make", "Model", "Year", "   ", "Price");
+		for (int j = 0; j < carsList.size(); j++ )
+		System.out.println(carsList.get(j).toString());
 		
 		System.out.println("Would you like to enter another number? y/n: ");
 		choice = scnr.next();
-		System.out.println("The end!!!");
-		
+				
 		}
-		
+		System.out.println("The end!!!");
 		scnr.close();
 	}
 

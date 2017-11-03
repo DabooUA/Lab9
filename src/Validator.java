@@ -4,7 +4,7 @@ public class Validator
 {
     public static String getString(Scanner sc, String prompt)
     {
-        System.out.print(prompt);
+        System.out.println(prompt);
         String s = sc.next();  // read user entry
         sc.nextLine();  // discard any other data entered on the line
         return s;
@@ -16,7 +16,7 @@ public class Validator
         boolean isValid = false;
         while (isValid == false)
         {
-            System.out.print(prompt);
+            System.out.println(prompt);
             if (sc.hasNextInt())
             {
                 i = sc.nextInt();

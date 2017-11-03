@@ -46,7 +46,7 @@ public class Cars {
 	}
 	@Override
 	public String toString() {
-		return String.format("%-20s %-20s %-20s %s-20 %s-20 %20.2f \n",  make, model, year,  "---",  "$", price);
+		return String.format("%-10s %-10s %-10s %s %5s %1.2f\n",  make, model, year,  "---", "$", price);
 	}
 
 	
